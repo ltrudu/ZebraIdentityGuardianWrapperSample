@@ -44,11 +44,35 @@
             >
 
             <Button
-                android:id="@+id/btLogin"
+                android:id="@+id/btLogin1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Auth request" />
+                android:text="Auth request S1" />
+
+            <Button
+                android:id="@+id/btLogin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auth request S2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llActions3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llActions2"
+            >
+
+            <Button
+                android:id="@+id/btLogin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auth request S3" />
 
             <Button
                 android:id="@+id/btLogout"
@@ -66,7 +90,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/llActions2">
+            app:layout_constraintTop_toBottomOf="@+id/llActions3">
 
             <TextView
                 android:id="@+id/tv_status"

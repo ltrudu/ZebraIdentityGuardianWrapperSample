@@ -72,10 +72,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        findViewById(R.id.btLogin).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btLogin1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login();
+                login(IGCRHelper.EAuthenticationScheme.authenticationScheme1, IGCRHelper.EAuthenticationFlag.blocking);
+            }
+        });
+
+        findViewById(R.id.btLogin2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                login(IGCRHelper.EAuthenticationScheme.authenticationScheme2, IGCRHelper.EAuthenticationFlag.unblocking);
+            }
+        });
+
+        findViewById(R.id.btLogin3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                login(IGCRHelper.EAuthenticationScheme.authenticationScheme3, IGCRHelper.EAuthenticationFlag.blocking);
             }
         });
 
@@ -172,9 +186,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void login()
+    private void login(IGCRHelper.EAuthenticationScheme scheme, IGCRHelper.EAuthenticationFlag flag)
     {
-        IGCRHelper.sendAuthenticationRequest(this, IGCRHelper.EAuthenticationScheme.authenticationScheme1, IGCRHelper.EAuthenticationFlag.unblocking, new IIGAuthenticationResultCallback() {
+        IGCRHelper.sendAuthenticationRequest(this, scheme, flag, new IIGAuthenticationResultCallback() {
             @Override
             public void onSuccess(String message) {
                 addLineToStatus("************Send Auth Request*************");

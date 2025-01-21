@@ -39,8 +39,6 @@ See sample App for a quick implementation of the library.
 ## Sample Repository
 https://github.com/ltrudu/ZebraIdentityGuardianWrapperSample
 
-Look for "TODO: MANDATORY FOR ZebraIdentitiyGuardianWrapper" section of this Readme to find what you need to add to your AndroidManifest.xml to use this wrapper.
-
 ## Important !!
 ```text
 	If you plan to use the AuthenticationStatusObserver, it is advised to implement it inside a foreground service.

@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.zebra.zebraidentitiyguardianwrapper.AuthenticationStatusObserver;
-import com.zebra.zebraidentitiyguardianwrapper.IGCRHelper;
-import com.zebra.zebraidentitiyguardianwrapper.IIGAuthenticationResultCallback;
-import com.zebra.zebraidentitiyguardianwrapper.IIGSessionResultCallback;
+import com.zebra.zebraidentityguardianwrapper.AuthenticationStatusObserver;
+import com.zebra.zebraidentityguardianwrapper.IGCRHelper;
+import com.zebra.zebraidentityguardianwrapper.IIGAuthenticationResultCallback;
+import com.zebra.zebraidentityguardianwrapper.IIGSessionResultCallback;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void login()
     {
-        IGCRHelper.sendAuthenticationRequest(this, IGCRHelper.EAuthenticationScheme.authenticationScheme1, IGCRHelper.EAuthenticationFlag.blocking, new IIGAuthenticationResultCallback() {
+        IGCRHelper.sendAuthenticationRequest(this, IGCRHelper.EAuthenticationScheme.authenticationScheme1, IGCRHelper.EAuthenticationFlag.unblocking, new IIGAuthenticationResultCallback() {
             @Override
             public void onSuccess(String message) {
                 addLineToStatus("************Send Auth Request*************");
